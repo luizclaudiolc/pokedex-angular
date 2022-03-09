@@ -12,7 +12,7 @@ export class PokemonCardComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.pokemonIndex);
+    // console.log(this.pokemon);
   }
 
   getPokemonImageUrl(): string {
