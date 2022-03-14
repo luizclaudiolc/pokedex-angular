@@ -17,10 +17,6 @@ export class NavbarComponent implements OnInit {
       label: 'About',
       icon: 'info_outline',
     },
-    {
-      label: 'Contact',
-      icon: 'mail_outline',
-    }
   ];
 
   constructor() { }
