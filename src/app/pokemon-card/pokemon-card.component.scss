@@ -10,8 +10,16 @@
     border-top: 3px solid rgb(51, 49, 192);
 }
 
-// .card-pokemon:hover {
-//     border-right: 1.5px solid rgb(51, 49, 192);
-//     border-left: 1.5px solid rgb(51, 49, 192);
-//     border-bottom: 1.5px solid rgb(51, 49, 192);
+// .card-pokemon::before {
+//     content: '';
+//     position: absolute;
+//     inset: -5px;
+//     z-index: -1;
+//     border-radius: 16px;
+//     background: linear-gradient(to right, #f9f9f9, #e4d3d3);
 // }
+
+.card-pokemon:hover {
+    background: linear-gradient(to bottom, #f9f9f9 14.43%, #e4d3d3 85.43%);
+    transition: all 0.5s ease;
+}
