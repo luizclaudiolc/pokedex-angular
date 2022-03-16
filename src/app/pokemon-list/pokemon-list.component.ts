@@ -15,10 +15,14 @@ export class PokemonListComponent implements OnInit {
     this.pokemonsService.getPokemonList()
       .pipe(
         tap(({ results }) => {
-          this.pokemonsList = results.map((name: { name: string }) => name.name);
+          this.pokemonsList = results.map((name: { name: string }) => 
+            this.transformFirstLetter(name.name));
         })
       )
       .subscribe();
-    
+  }
+
+  transformFirstLetter(str: string): string {
+    return `${str.charAt(0).toUpperCase()}${str.slice(1)}`;
   }
 }

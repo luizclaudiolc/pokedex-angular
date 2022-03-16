@@ -10,18 +10,22 @@ export class NavbarComponent implements OnInit {
 
   itensMenu: ItemMenu[] = [
     {
-      label: 'Home',
-      icon: 'home',
+      label: 'Pesquisa',
+      icon: 'search'
     },
-    {
+   /*  {
       label: 'About',
       icon: 'info_outline',
-    },
+    }, */
   ];
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  search(event: Event): void {
+    console.log(event.target);
   }
 
 }

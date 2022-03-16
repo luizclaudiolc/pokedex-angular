@@ -2,11 +2,13 @@
     <span fxFlex fxLayoutAlign="center">
         <img src="https://assets.pokemon.com/assets/cms2-pt-br/img/misc/gus/buttons/logo-pokemon-79x45.png" alt="logo">
     </span>
-    <button mat-icon-button *ngFor="let item of itensMenu" fxHide.xs>
-        <mat-icon class="mr">
-            {{ item.icon }}
-        </mat-icon>
-    </button>
+    <ng-container *ngFor="let item of itensMenu">
+        <button mat-icon-button *ngIf="item.label === 'Pesquisa'" fxHide.xs>
+            <mat-icon class="mr" (click)="search($event)">
+                {{ item.icon }}
+            </mat-icon>
+        </button>
+    </ng-container>
     <button mat-icon-button [matMenuTriggerFor]="dropMenu" fxHide fxShow.xs>
         <mat-icon>
             more_vert
